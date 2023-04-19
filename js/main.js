@@ -75,11 +75,19 @@ window.addEventListener("scroll", _.throttle(function() {
 
 // 이미지 반복 처리
 const skillImgEls = document.querySelectorAll("ul.skill > li");
-
 for(let i=0; i <skillImgEls.length; i++){
     skillImgEls[i].style.backgroundImage="url('./img/s5-skill0" + (i+1)+".png')"; 
 }
 
+const businessImgEls = document.querySelectorAll(".business-img");
+for(let i=0; i <businessImgEls.length; i++){
+    businessImgEls[i].style.backgroundImage="url('./img/s6-business0" + (i+1)+".png')"; 
+}
+
+const bulidImgEls = document.querySelectorAll(".bulid-img");
+for(let i=0; i <bulidImgEls.length; i++){
+    bulidImgEls[i].style.backgroundImage="url('./img/s7-bulid0" + (i+1)+".png')"; 
+}
 
 // ul.skill > li:hover > a .text > p 애니메이션
 // const skillTextEls = document.querySelectorAll("ul.skill > li > a .text > p");
