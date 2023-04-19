@@ -77,7 +77,7 @@ window.addEventListener("scroll", _.throttle(function() {
 const skillImgEls = document.querySelectorAll("ul.skill > li");
 
 for(let i=0; i <skillImgEls.length; i++){
-    skillImgEls[i].style.backgroundImage="url('img/s5-skill0" + (i+1)+".png')"; 
+    skillImgEls[i].style.backgroundImage="url('./img/s5-skill0" + (i+1)+".png')"; 
 }
 
 
