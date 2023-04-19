@@ -272,7 +272,7 @@ body{font-size: 16px; font-family: 'Noto Sans KR', sans-serif; font-weight: 400;
 #header .logo .logo-img{
     width: 110px;
     height: 70px;
-    background-image: url("/img/s2-logo.png"),url("/img/s2-logo-fixed.png") ;
+    background-image: url("./img/s2-logo.png"),url("./img/s2-logo-fixed.png") ;
 }
 #header ul.main-menu{
     margin-top: 36px;
@@ -374,7 +374,7 @@ transition: .3s;
     width: 94px;
     background-size:cover;
     background-repeat: none;
-    background-image: url("/img/s2-logo-fixed.png");
+    background-image: url("./img/s2-logo-fixed.png");
 }
 
 

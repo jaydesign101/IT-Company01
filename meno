@@ -83,3 +83,11 @@ git remote -v
 
 4. 기존 로그인 정보 삭제
 제어판 > 사용자 계정 > 자격 증명 관리자 > Windows 자격 증명 >> git >> 제거
+
+
+-------------------------------
+git 에러 해결
+
+1. [Git]  ! [rejected] master -> master (non-fast-forward) 해결 방법
+>>> git push origin +master
+- 브랜치 이름 앞에 + 붙du push
