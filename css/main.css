@@ -1,0 +1,202 @@
+@import url("commom.css");
+
+/* [s1] on-top : 언어 선택, 가맹점 >>>> COMMOM.css //////////////////////////////////////////////////////// */
+/* [s2] header : 로고, 메인메뉴  >>> COMMOM.css//////////////////////////////////////////////////////// */
+
+
+/* [s3] main-banner : 메인 배너 //////////////////////////////////////////////////////// */
+.mainbanner-back{
+    width: 100%;
+    background-color: var(--bb1);
+    position: absolute;
+}
+.mainbanner.swiper{
+    width: 100%;
+}
+.mainbanner.swiper-wrapper{
+    position: relative;
+    width: auto;
+}
+.mainbanner.swiper-slide{
+    width: auto;
+    height: 120%;
+    overflow: hidden;
+}
+.mainbanner.swiper-slide > div{ /*모든 요소 내부에 있게 하기*/
+    position: absolute;
+}
+.mainbanner.swiper-slide .text{ /*텍스트 공통*/
+    color:#fff;
+    width: 100%;
+    z-index: 5;
+    position: absolute;
+    top:15%;
+    left:10%;
+}
+.mainbanner.swiper-slide .text p.top,
+.mainbanner.swiper-slide .text h2,
+.mainbanner.swiper-slide .text p.bottom{
+    transform: translateY(20px);
+    opacity: 0;
+}
+.mainbanner.swiper-slide .text p.top{
+    font-size: 16px;
+    font-weight: 300;
+}
+.mainbanner.swiper-slide .text h2{
+    font-size: 50px;
+    font-weight: 700;
+    padding:6px 0 36px 0;
+}
+.mainbanner.swiper-slide .text p.bottom{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.mainbanner.swiper-slide .big-bg{ /* 가운데 정렬 */
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: auto;
+}
+.mainbanner.swiper-slide .big-bg > img, 
+.mainbanner.swiper-slide .big-bg > video{
+    object-fit: cover;
+    height: 110%;
+    width: auto;
+}
+/* 슬라이드 애니메이션 */
+.mainbanner.swiper-slide-active .text p.top{
+    animation: down-up 1.2s .2s both;
+    /* both : 100 % 일경우 멈춤 */
+}
+.mainbanner.swiper-slide-active .text h2{
+    animation: down-up 1.2s .5s both;
+}
+.mainbanner.swiper-slide-active .text p.bottom{
+    animation: down-up 1.2s .8s both;
+}
+
+.mainbanner.side-button--wrap{
+    position: absolute;
+    top:80%;
+    right:10%;
+}
+
+
+
+/* [s4] main-foot : 이용 가맹점 수 누적 결제액 등등 /////////////////////////*/
+ul.jt-info{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-top: -80px;
+    z-index: 20;
+    /* background-color: blue; */
+}
+ul.jt-info > li{
+    width: 25%;
+    text-align: center;
+    color:#fff;
+    border-right: 1px solid rgba(255,255,255, .5);
+}
+ul.jt-info > li .num{
+    font-weight: 500;
+    font-size: 28px;
+}
+ul.jt-info > li .unit{
+    font-weight: 400;
+    font-size: 16px;
+}
+ul.jt-info > li .plus {
+    overflow: visible;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2px;
+    margin-left: -4px;
+}
+ul.jt-info > li p.description{
+    font-weight: 350;
+    font-size: 12px;
+    margin-top:2px;
+}
+
+
+
+
+
+
+
+
+
+
+/* [s5] major sills : 메이저 스킬//////////////////////////////////////// */
+.skills{
+    background-color: var(--bb1);
+    width: 100%;
+    position: relative;
+}
+.skills .view-wrap::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30%;
+    top:520px;
+    left:0;
+    background-color: #fff;
+    z-index: 1;
+    position: absolute;
+    border-radius: 80px 0 0 0;
+}
+.skills .h3{
+    padding-top: 210px;
+}
+ul.skill{
+    margin-top: 90px;
+    z-index: 10;
+    position:relative;
+    display: flex;
+}
+ul.skill > li{
+    width: 25%;
+    height: 360px;
+    cursor: pointer;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    
+}
+/* text */
+ul.skill > li > a .text{
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    padding: 20px;    
+}
+ul.skill > li > a .text > h4{
+    font-size: 20px;
+    font-weight: 700;   
+}
+ul.skill > li > a .text > h4 >p{
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 16px;   
+}
+ul.skill > li > a .text > .description{
+    font-size: 14px;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-out;
+}
+ul.skill > li:hover > a .text > .description{
+    max-height: 300px;
+    transition: max-height 0.8s ease-in;
+}
+ul.skill > li > a .text > .description > p{
+    padding-top:20px;
+}
