@@ -478,13 +478,13 @@ ul.skill > li > a .text > .description > p{
 }
 .news-right .swiper-wrapper .swiper-slide .top .top-icon.icon-news::after{
     content: 'News';
-    background-color: red;
+    background-color: var(--mc1);
     display: block;
     padding: 1px 4px 2px 4px;
 }
 .news-right .swiper-wrapper .swiper-slide .top .top-icon.icon-notice::after{
     content: 'Notice';
-    background-color: red;
+    background-color: #EC5C1E;
     display: block;
     padding: 1px 4px 2px 4px;
 }

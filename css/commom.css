@@ -445,19 +445,21 @@ transition: .3s;
 }
 .btn:hover{
     border-radius: 10px 0px;
-    color: var(--mc1);
-    border: 1px var(--mc1) solid;
+    color: #fff;
+    border: 1px var(--bb1) solid;
+    background-color: var(--bb1);
 }
 .btn:hover svg path{
-    fill : var(--mc1);
+    fill : #fff;
 }
 
 .btn--white:hover{
-    color: var(--mc2);
-    border: 1px var(--mc2) solid;
+    color: var(--bb1);
+    border: 1px #fff solid;
+    background-color: #fff;
 }
 .btn--white:hover svg path{
-    fill : var(--mc2);
+    fill : var(--bb1);
 }
 
 

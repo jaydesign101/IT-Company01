@@ -9,6 +9,7 @@ var swiper = new Swiper(".swiper.mainbanner", {
   pagination: {
     el: ".mainbanner.swiper-pagination",
     type: "fraction",
+    //clickable: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
