@@ -78,12 +78,31 @@
     animation: down-up 1.2s .8s both;
 }
 
-.mainbanner.side-button--wrap{
+.mainbanner.pagination-wrap{
     position: absolute;
-    top:80%;
+    top:55%;
     right:10%;
-}
+    background-color: #808080;
 
+}
+/* swiper btn 버튼 */
+.mainbanner.swiper .swiper-pagination-bullet{
+    background-color: rgba(255,255,255,1);
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    margin-top: 10px;
+}
+    
+.mainbanner.swiper .swiper-pagination-bullet::after{
+    content: '';
+    display: block;
+    background-color: rgba(255,255,255,1);
+    width: 10px;
+    height: 10px;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
 
 
 /* [s4] main-foot : 이용 가맹점 수 누적 결제액 등등 /////////////////////////*/
@@ -371,6 +390,7 @@ ul.skill > li > a .text > .description > p{
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    overflow: hidden;
 }
 .news .dim{
     width: 2120px;
