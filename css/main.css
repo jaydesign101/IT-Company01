@@ -380,12 +380,15 @@ ul.skill > li > a .text > .description > p{
 .news .view-wrap{
     position: relative;
     z-index: 10;
-    padding-top: 90px;
     box-sizing: border-box;
+    display: flex;
 }
 .news .left{
     width: 216px;
     height: 249px;
+    position: absolute;
+    top:90px;
+    left:0;
 }
 .news .left > .text{
     font-weight: 400;
@@ -397,4 +400,126 @@ ul.skill > li > a .text > .description > p{
 }
 .news .left > .btn-container{
     justify-content:left;
+}
+/* 뉴스 스와이퍼 슬라이드 Swiper news-slide */
+.news-right{
+    width: calc(100% - 216px);
+    height: 398px;
+    position: absolute;
+    top:90px;
+    right: 0;
+}
+.news-right .swiper-wrapper{
+    width: 100%;
+    height: 336px;
+}
+.news-right .swiper-wrapper .swiper-slide{
+    width: 256px;
+    height: 100%;
+}
+.news-right .custom{
+    width: 100%;
+    height: 66px;
+    position: relative;
+    display: flex;
+}
+.news-right .custom .swiper-btn{
+    width: 68px;
+    height: 34px;
+    position: absolute;
+    bottom: 8px;
+    right: 0;
+}
+.news-right .custom .swiper-btn > div{
+    width: 34px;
+    height: 34px;
+    top:22px;
+    border: 1px #fff solid;
+    transition: .5s;
+    box-sizing: border-box;
+}
+.news-right .custom .swiper-btn >div:hover{
+    background-color: rgba(255,255,255,.5);
+}
+.news-right .custom .swiper-btn .swiper-button-prev{
+    left:0;
+    border-radius: 10px 0px 0px 0px;
+}
+.news-right .custom .swiper-btn .swiper-button-next{
+    border-radius: 0px 0px 10px 0px;
+    border-left:1px #fff solid; 
+    right:0;
+}
+.news-right .custom .swiper-btn .swiper-button-next.swiper-button-disabled{
+    border-left:1px #fff solid; 
+}
+.news-right .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal{
+    width: calc(100% - 68px);
+    height: 2px;
+    position: absolute;
+    top:42px;
+    left:0;
+    background-color: rgba(255,255,255,.5);
+}
+.news-right .swiper-pagination-progressbar-fill{
+    background-color:#fff;
+}
+
+.news-right .swiper-wrapper .swiper-slide{
+    width: 256px;
+    height: 100%;
+}
+.news-right .swiper-wrapper .swiper-slide .top{
+    display: flex;
+    color:#fff;
+    font-weight: 400;
+    font-size: 10px;
+    justify-content: space-between;
+}
+.news-right .swiper-wrapper .swiper-slide .top .top-icon.icon-news::after{
+    content: 'News';
+    background-color: red;
+    display: block;
+    padding: 1px 4px 2px 4px;
+}
+.news-right .swiper-wrapper .swiper-slide .top .top-icon.icon-notice::after{
+    content: 'Notice';
+    background-color: red;
+    display: block;
+    padding: 1px 4px 2px 4px;
+}
+.news-right .swiper-wrapper .swiper-slide .content{
+    background-color: rgba(255,255,255,.3);
+    width: 100%;
+    height: 318px;
+    padding:20px;
+    box-sizing: border-box;
+    line-height: 150%;
+    box-sizing: border-box;
+}
+.news-right .swiper-wrapper .swiper-slide .content .title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 180%;
+    color:#fff;
+}
+.news-right .swiper-wrapper .swiper-slide .content .description{
+    padding-top: 14px;
+    font-weight: 400;
+    font-size: 14px;
+    width: 100%;
+    height: 196px;
+    color:rgba(255,255,255, .8);
+    overflow: hidden;
+    display: -webkit-box; /* 사용할 수 있는 브라우저에서 지정 */
+    -webkit-line-clamp: 8; /* 표시할 줄 수 지정 */
+    -moz-line-clamp: 8; /* Firefox */
+    -ms-line-clamp: 8; /* Internet Explorer */
+    line-clamp: 8; /* 대부분의 브라우저 */
+    -webkit-box-orient: vertical; /* 세로 방향으로 텍스트 배치 */
+    text-overflow: ellipsis; /* 생략 부호(...)로 대체 */
+
+}
+.news-right .swiper-wrapper .swiper-slide .content:hover .description{
+    text-decoration: underline 1px #fff;;
 }
