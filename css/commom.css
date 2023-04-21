@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 /* 공통 부분 //////////////////////////////////////////////////*/
-*{margin: 0; padding: 0;}
+*{
+    margin: 0; padding: 0;
+    -webkit-user-select: none; /* Safari 드래그 방지*/
+    -moz-user-select: none; /* Firefox 드래그 방지*/
+    -ms-user-select: none; /* IE10+/Edge 드래그 방지*/
+    user-select: none; /* 표준 드래그 방지*/
+}
 a{text-decoration: none; display: block; color:var(--bb1)}
 li{list-style-type: none;}
 img{display: block;}
@@ -26,6 +32,7 @@ body{font-size: 16px; font-family: 'Noto Sans KR', sans-serif; font-weight: 400;
 .view-wrap{
     width: 1024px;
     margin: 0 auto;
+    position: relative;
 }
 
 /* 그라이언트 포커스 및 DIM //////////////////////////////////////////////////*/

@@ -152,19 +152,8 @@ ul.jt-info > li p.description{
     background-color: var(--bb1);
     width: 100%;
     position: relative;
+    overflow: hi
 }
-/* .skills .view-wrap::before{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 30%;
-    top:520px;
-    left:0;
-    background-color: #fff;
-    z-index: 1;
-    position: absolute;
-    border-radius: 100px 0 0 0;
-} */
 .skills .round{
     width: 100%;
     height: 100px;
@@ -244,6 +233,7 @@ ul.skill > li > a .text > .description > p{
 /* [s6] always provide : 비즈니스 /////////////////////////////////////// */
 .business{
     background-color: #fff;
+    position: relative;
 }
 .business .h3{
     padding-top: 210px;
@@ -304,6 +294,8 @@ ul.skill > li > a .text > .description > p{
 /* [s7] bulid : 사례 /////////////////////////////////////// */
 .bulid{
     background-color: #F9F9F9;
+    position: relative;
+    overflow: hidden;
 }
 .bulid .round{
     width: 100%;
@@ -317,9 +309,11 @@ ul.skill > li > a .text > .description > p{
     justify-content:center;
 }
 .bulid .container{
+    position: relative;
     display: grid;
     grid-template-columns: 362px 362px 320px;
     grid-template-rows: 402px 402px 370px;
+    z-index: 1;
 }
 .bulid .container .item{
     cursor: pointer;
@@ -595,19 +589,111 @@ ul.skill > li > a .text > .description > p{
     width: 100%;
     background-color: var(--bb1);
 }
-.footer .view-wrap{
-}
+
 .footer ul.sitemap{
-    color:var(--bb4);
+    width: 100%;
     display: flex;
+    text-align: center;
+    padding: 60px 0;
 }
-.footer ul.sitemap li{
+
+.footer .line{
+    width: 90%;
+    height: 1px;
+    background-color: var(--bb2);
+    margin: 0 auto;
+}
+.footer ul.sitemap > li{
     width: 25%;
-    background-color: antiquewhite;
+    font-weight: 400;
+    font-size: 14px;
+    color:var(--bb3);
 }
-.footer ul.sitemap li a{
+.footer ul.sitemap > li:first-child{
+    font-weight: 600;
+    font-size: 18px;
+    color:var(--bb3);
+}
+.footer ul.sitemap > li > ul{
+    margin-top: 10px;
+}
+.footer ul.sitemap > li > ul > li {
+    width: 100%;
+}
+.footer ul.sitemap > li > ul > li a{
+    display: inline-block;
     color:var(--bb5);
-    padding:10px;
-    display: block;
-    background-color: #EC5C1E;
+    padding: 6px;
+}
+.footer ul.sitemap > li > ul a:hover{
+    color:#fff;
+}
+.footer .foot{
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+}
+
+
+
+
+
+
+
+
+/* 텍스트 배경 디자인 - design-text : ski */
+.design-text{
+    font-weight: 900;
+    font-size: 200px;
+    color:#F0F0F0;
+    position: absolute;
+    z-index: 0;
+}
+.skills .view-wrap .design-text.dt-ski{
+    top:278px;
+    left:-425px;
+    color:rgba(255,255,255,.2);
+}
+.skills .view-wrap .design-text.dt-lls{
+    top:442px;
+    right:-425px;
+}
+.business .view-wrap .design-text.dt-business{
+    transform: rotate(90deg);
+    top:820px;
+    left:-720px;
+}
+
+.bulid .dt-wemake{
+    width: 3000px;
+    top:720px;
+}
+.bulid .dt-wemake.original{ 
+    animation: 20s linear 0s infinite normal forwards running dt-mewake-original;
+}
+.bulid .dt-wemake.clone{
+    animation: 20s linear 0s infinite normal none running dt-mewake-clone;
+}
+/* 애니메이션 */
+@keyframes dt-mewake-original {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    50.01%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes dt-mewake-clone {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
 }

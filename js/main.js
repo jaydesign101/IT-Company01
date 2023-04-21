@@ -95,3 +95,23 @@ for(let i=0; i <bulidImgEls.length; i++){
 //     skillTextEls[i].style.height=skillTextEls[i].getBoundingClientRect().height+"px";
 //     alert(skillTextEls[i].getBoundingClientRect().height);
 // }
+
+
+
+// design-text dt-wemake 무한 슬라이드
+//https://blogpack.tistory.com/1120
+//롤링 배너 복제본 생성
+let weMakeEl = document.querySelector(".dt-wemake");
+weMakeEl.id = "roller1";
+let clone = weMakeEl.cloneNode(true);
+clone.id = 'roller2';
+document.querySelector('.bulid').appendChild(clone); //부착
+
+//원본, 복제본 배너 위치 지정
+document.querySelector('#roller1').style.left = '0px';
+document.querySelector('#roller2').style.left = weMakeEl.offsetWidth + 'px';//roller 위치 조정
+// alert(document.querySelector('.bulid').offsetWidth);
+
+//클래스 할당
+weMakeEl.classList.add('original');
+clone.classList.add('clone');
