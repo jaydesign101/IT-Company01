@@ -152,7 +152,7 @@ ul.jt-info > li p.description{
     background-color: var(--bb1);
     width: 100%;
     position: relative;
-    overflow: hi
+    overflow:hidden;
 }
 .skills .round{
     width: 100%;
@@ -665,35 +665,14 @@ ul.skill > li > a .text > .description > p{
 }
 
 .bulid .dt-wemake{
-    width: 3000px;
+    width: 100%;
+    min-width: 3000px;
     top:720px;
+    
 }
 .bulid .dt-wemake.original{ 
     animation: 20s linear 0s infinite normal forwards running dt-mewake-original;
 }
 .bulid .dt-wemake.clone{
     animation: 20s linear 0s infinite normal none running dt-mewake-clone;
-}
-/* 애니메이션 */
-@keyframes dt-mewake-original {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-100%);
-    }
-    50.01%{
-        transform: translateX(100%);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-@keyframes dt-mewake-clone {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-200%);
-    }
 }
