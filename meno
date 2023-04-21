@@ -90,4 +90,4 @@ git 에러 해결
 
 1. [Git]  ! [rejected] master -> master (non-fast-forward) 해결 방법
 >>> git push origin +master
-- 브랜치 이름 앞에 + 붙du push
+- 브랜치 이름 앞에 + 붙어 push

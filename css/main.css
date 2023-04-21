@@ -538,8 +538,53 @@ ul.skill > li > a .text > .description > p{
     line-clamp: 8; /* 대부분의 브라우저 */
     -webkit-box-orient: vertical; /* 세로 방향으로 텍스트 배치 */
     text-overflow: ellipsis; /* 생략 부호(...)로 대체 */
-
 }
 .news-right .swiper-wrapper .swiper-slide .content:hover .description{
     text-decoration: underline 1px #fff;;
+}
+
+
+/* [s9] 인재채용, 문의하기 ///////////////////////////// */
+.sec9{
+    background-color: var(--bb1);
+    width: 100%;
+    overflow: hidden;
+}
+.sec9 .sec9-wrap{
+    display: flex;
+    width: 100%;
+    max-width: 2120px;
+    min-width: 1024px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.sec9 .employ,  .sec9 .inquiry{
+    width: 50%;
+    height: 320px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+}
+.sec9 .employ { background-image: url("/img/s9-left.png");}
+.sec9 .inquiry{ background-image: url("/img/s9-right.png"); }
+.sec9 .employ .gradient-side::after{ background: transparent;}
+.sec9 .inquiry .gradient-side::before{ background: transparent;}
+.sec9 .content{
+    display: flex;
+    flex-direction: column;
+    color:#fff;
+    z-index: 11;
+    text-align: center;
+}
+.sec9 .content .title{
+    font-weight: 700;
+    font-size: 24px;
+}
+.sec9 .content .description{
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
