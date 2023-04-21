@@ -16,8 +16,8 @@ body{
     font-family: 'Noto Sans KR', sans-serif; 
     font-weight: 400;
     width: 100%;
-    max-width: 1920px;
-    min-width: 1024px; 
+    min-width: 1020px;
+    margin: 0 auto;
 }
 
 /* 색 변수 지정 //////////////////////////////////////////////////*/
@@ -91,40 +91,48 @@ body{
 }
 
 
-
-
-
 /* [s1] on-top : 언어 선택, 가맹점 //////////////////////////////////////////////////////// */
-.on-top-bg{
+.header{
+    width: 100%;
+    display: flex;
+    padding: 0 50px;
+    box-sizing: border-box;
     position: absolute;
     top:0;
     left:0;
-    width: 100%;
-    height: 36px;
-    background-color: var(--bb1);
-    z-index: -1;
+    z-index: 100;
 }
-#on-top{
-    position: relative;
+.header .logo-img{
+    width: 110px;
+    height: 70px;
+    background-image: url("/img/s2-logo.png");
+    background-size: cover;
+    margin-top: 24px;
+}
+.header .container{
+    flex-grow: 1;
+}
+.header .on-top{
     height: 36px;
-    width: 100%;
-    
-    font-size: 14px; font-weight: 300;
     display: flex;
     justify-content: flex-end;
-    padding:10px 50px;
+    align-items: baseline;
+    font-size: 14px; 
+    font-weight: 300;
+    z-index: 100;
+    /* align-items: flex-end; */
+    padding-top: 10px;
     box-sizing: border-box;
-    z-index: 101;
 }
-#on-top .select-lang{ 
+.on-top .select-lang{ 
     position: relative;
 }
 
 /* //////////// 버튼 */
-#on-top .select, 
-#on-top .store{ /* 버튼 공통*/
+.on-top .select, 
+.on-top .store{ /* 버튼 공통*/
     display: inline-block;
-    border-radius: 10px 0 10px 0;
+    border-radius: 10px;
     position: relative;
     height: 26px;
     width: auto;
@@ -132,36 +140,33 @@ body{
     cursor: pointer;
     transition: .3s;
 }
-#on-top .select-lang .select{
+.on-top .select-lang .select{
     color:rgba(255,255,255, .6);
     border : 1px solid rgba(255,255,255, .6); 
     box-sizing: border-box;
     padding:1px calc(8px + 20px + 4px) 7px 14px;
 }
-
-#on-top .store{
+.on-top .store{
     color:var(--bb1);
     padding:2px 8px 13px calc(8px + 20px + 4px);
     background-color: rgba(255,255,255, .6);;
     border:transparent;
     transition: .3s;
     margin-left: 14px;
-    
 }
-#on-top .store svg path {
+.on-top .store svg path {
     transition: fill .3s;
 }
-#on-top .select-lang .select svg, 
-#on-top .store svg{ /*svg 공통*/
+.on-top .select-lang .select svg, 
+.on-top .store svg{ /*svg 공통*/
     position: absolute;
     top: 2px;
-    
 }
-#on-top .select-lang .select svg{ right: 8px;}
-#on-top .store svg{ left: 8px;}
+.on-top .select-lang .select svg{ right: 8px;}
+.on-top .store svg{ left: 8px;}
 
 /*언어 선택 박스*/
-#on-top .select-lang ul.lang-box{ 
+.on-top .select-lang ul.lang-box{ 
     background-color: #fff;
     width: 100%;
     position: relative;
@@ -179,83 +184,111 @@ body{
     pointer-events: none;
     transition: .3s;
 }
-#on-top ul.lang-box li{
+.on-top ul.lang-box li{
     z-index: 12;
     position: relative;
 }
 
-#on-top ul.lang-box li a{
+.on-top ul.lang-box li a{
     padding:4px 0;
     width: 100%;
     text-align: center;
 }
 
 /*마우스 오버 효과*/
-#on-top .select-lang:hover .select{ /*언어 선택*/
+.on-top .select-lang:hover .select{ /*언어 선택*/
     /* background-color: rgba(255,255,255,.3); */
-    border-radius: 10px 0 0 0;
+    border-radius: 10px 10px 0 0;
     color:#fff;
  }
- #on-top .select-lang .select svg path{
+.on-top .select-lang .select svg path{
     transition: fill-opacity .3s;
  }
- #on-top .select-lang:hover .select svg path{
+.on-top .select-lang:hover .select svg path{
     fill-opacity : 1
  }
- #on-top ul.lang-box:hover{
+.on-top ul.lang-box:hover{
     opacity: 1;
 }
-#on-top .select-lang:hover ul.lang-box{
+.on-top .select-lang:hover ul.lang-box{
     opacity: 1;
     pointer-events:all;
 }
-#on-top ul.lang-box li a:hover{
+.on-top ul.lang-box li a:hover{
     color:var(--mc1);
 }
-#on-top .store:hover{ /*가맹점 선택*/
+.on-top .store:hover{ /*가맹점 선택*/
     background-color:var(--mc1);
     color:#fff;
 }
-#on-top .store:hover svg path{
+.on-top .store:hover svg path{
     fill:#fff;
 }
 
+/* [s2] header-main-menu : 로고, 메인메뉴 ////////////////////////////// */
 
-/* [s2] header : 로고, 메인메뉴  //////////////////////////////////////////////////////// */
-#header{
-    width: 100%;
-    height: calc(80px + 36px);
-    margin-top: -36px;
+.header ul.main-menu{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:0 50px;
-    box-sizing: border-box;
-    position:absolute;
-
-    z-index: 100;
-    border-bottom: 1px solid rgba(255,255,255,.01);
-    background-color: rgba(255,255,255,.1);
-}
-#header .logo .logo-img{
-    width: 110px;
+    justify-content: flex-end;
+    /* align-items: center; */
     height: 70px;
-    background-image: url("../img/s2-logo.png"),url("../img/s2-logo-fixed.png") ;
+    padding-top: 7px;
+    box-sizing: border-box;
+    
 }
-#header ul.main-menu{
-    margin-top: 36px;
-    display: flex;
-    height:calc(100% - 36px);
-}
-#header ul.main-menu > li{ 
+.header ul.main-menu > li{
+    width: 156px;
     position: relative;
-    height: 100%;
 }
-#header ul.main-menu > li > a::after{
+.header ul.main-menu > li > a{
+    
+    padding:15px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    color:#fff;
+    display: block;
+    box-sizing: border-box;
+
+}
+.header ul.main-menu > li > ul.sub-menu{
+    padding:10px 0;
+    background-color: rgba(255,255,255,1);
+    border-radius: 20px 0 20px 0;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.3); 
+    display: none;
+    position:absolute;
+    top:53px;
+    left:0;
+    width: 100%;
+    border: #f0f0f0 solid 1px;
+    box-sizing: border-box;
+}
+.header ul.main-menu > li > ul.sub-menu > li{
+    
+}
+.header ul.main-menu > li > ul.sub-menu > li a{
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--bb1);
+    text-align: center;
+    padding:10px;
+}
+.header ul.main-menu > li > ul.sub-menu > li a:hover{
+    color:var(--mc1);
+}
+
+/* 메인메뉴 호버시 - 서브메뉴 오픈 */
+.header ul.main-menu > li:hover > ul.sub-menu{
+    display:block;
+}
+
+/* 마오스 오버시 : 밑줄 효과 */
+.header ul.main-menu > li > a::after{
     content: '';
     display: block;
     position: absolute;
-    top:calc(66px - 5px);
+    top:48px;
     border-radius: 5px 5px 0 0;
     left:0;
     width: 0%;
@@ -265,85 +298,36 @@ body{
     transition: width .5s;
     transform: translateX(-50%);
 }
-#header ul.main-menu > li:hover a::after{
+.header ul.main-menu > li:hover a::after{
     width: 30%;
 }
-/* 메인메뉴 호버시 - 서브메뉴 오픈 */
-#header ul.main-menu > li:hover > ul.sub-menu{
-    display:block;
-}
-/* 서브메뉴 */
-#header ul.sub-menu{
-    position: absolute;
-    top:66px;
-    left:0;
-    width: 100%;
-    padding: 5px 0;
-    border-radius: 20px 0 20px 0;
-    box-shadow: 4px 4px 4px rgba(0,0,0,.3);
-    display: none;
-    background-color: rgba(255,255,255,.95);
-    border-left: 1px solid var(--gg4);
-}
-#header ul.sub-menu > li > a{
-    color:var(--bb1);
-    font-size: 16px;
-    font-weight: 400;
-    padding:10px;
-    text-align: center;
-    
-}
-#header ul.sub-menu > li:hover > a{
-    color:var(--mc1);
-} 
-#header ul.main-menu > li > a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff;
-    width: 160px;
-    height: 100%;
-    box-sizing: border-box;
-    box-sizing: border-box;
-    text-align: center;
-    position: relative;
-}
-
-
-
 
 /* fixed 스크롤 내렸을 때 header 는 고정된다 */
-#header.fixed{
-    margin-top: 0;
+.header.fixed{
     position:fixed;
     background-color: rgba(255,255,255,.8);
     box-shadow: 2px 2px 6px rgba(0,0,0,.05);
-    height: calc(80px);
+    height: 70px;
 }
-#header.fixed ul.main-menu{
-    margin-top: 0;
-    display: flex;
-    height:calc(100%);
-}
-#header.fixed ul.main-menu > li > a{
+.header.fixed ul.main-menu > li > a{
     color:var(--bb1);
 }
-#header.fixed ul.main-menu > li > a:hover{
-    color:var(--mc1);
-}
 
-#header, #header ul.main-menu > li > a, #header ul.main-menu > li > a:hover{
-transition: .3s;
+.header, .header ul.main-menu > li > a, .header ul.main-menu > li > a:hover{
+    transition: .3s;
 }
-#header.fixed .logo .logo-img{
-    height: 60px;
-    width: 94px;
-    background-size:cover;
+.header.fixed .logo .logo-img{
+    height: 50px;
+    width: 76px;
+    background-size:contain;
+    background-repeat: no-repeat;
     background-repeat: none;
     background-image: url("../img/s2-logo-fixed.png");
+    margin-top: 10px;
 }
+
+
+
 
 
 

@@ -54,8 +54,8 @@ h3Els.forEach(function(h3el){
 
 
 // 스크롤시 헤더 변경 및 고정
-const headerEl = document.querySelector("#header");
-const onTopEl = document.querySelector("#on-top");
+const headerEl = document.querySelector(".header");
+const onTopEl = document.querySelector(".on-top");
 
 
 window.addEventListener("scroll", _.throttle(function() {
