@@ -13,6 +13,7 @@ body{font-size: 16px; font-family: 'Noto Sans KR', sans-serif; font-weight: 400;
     --bb2 : #333;
     --bb3 : #666;
     --bb4 : #999;
+    --bb5 : rgb(212, 212, 212);
     --gg1 : #acacac;
     --gg2 : #c5c5c5;
     --gg3 : #dfdfdf;

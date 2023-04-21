@@ -588,3 +588,26 @@ ul.skill > li > a .text > .description > p{
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+
+/* [s10] 조직도 및 푸터/////////////////////////// */
+.footer{
+    width: 100%;
+    background-color: var(--bb1);
+}
+.footer .view-wrap{
+}
+.footer ul.sitemap{
+    color:var(--bb4);
+    display: flex;
+}
+.footer ul.sitemap li{
+    width: 25%;
+    background-color: antiquewhite;
+}
+.footer ul.sitemap li a{
+    color:var(--bb5);
+    padding:10px;
+    display: block;
+    background-color: #EC5C1E;
+}
