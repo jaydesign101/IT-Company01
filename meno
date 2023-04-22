@@ -81,7 +81,10 @@ git log (--oneline) >> 한줄 출력
 3. 원격 저장소 url 확인하기
 git remote -v
 
-4. 기존 로그인 정보 삭제
+4. 원격 저장소 URL 변경하기
+git remote set-url origin URL
+
+5. 기존 로그인 정보 삭제
 제어판 > 사용자 계정 > 자격 증명 관리자 > Windows 자격 증명 >> git >> 제거
 
 
