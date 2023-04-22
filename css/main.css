@@ -657,7 +657,7 @@ ul.skill > li > a .text > .description > p{
     padding: 30px 20px 60px 20px;
 }
 .footer .foot2 .logo{
-    background-image: url("/img/s2-logo.png");
+    background-image: url("../img/s2-logo.png");
     height: 50px;
     width: 100px;
     background-repeat: no-repeat;
