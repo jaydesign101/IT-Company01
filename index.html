@@ -12,6 +12,8 @@
   <!-- Link Lodash : throttle -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
+  <!-- Link ScrollMagic-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
   
   <!-- MINE -->
   
@@ -201,15 +203,16 @@
     <div class="round"></div>
     
     <div class="view-wrap">
-      <h3 class="h3">major skill</h3>
-
-
+      <div class="scroll-spy">
+        <h3 class="h3 back-to-position to-slow delay-0">major skill</h3>
+      </div>
+      
       <div class="design-text dt-ski">SKI</div>
       <div class="design-text dt-lls">LLS</div>
 
 
-      <ul class="skill">
-        <li>
+      <ul class="skill scroll-spy">
+        <li class="back-to-position to-down delay-0">
           <a href="#" onclick="showAlert()">
             <div class="text">
               <h4>CRM (고객 관리)
@@ -221,7 +224,7 @@
             </div>  
           </a>
         </li>
-        <li>
+        <li class="back-to-position to-down delay-1">
           <a href="#" onclick="showAlert()">
             <div class="text">
               <h4>결제 서비스
@@ -233,7 +236,7 @@
             </div>  
           </a>
         </li>
-        <li>
+        <li class="back-to-position to-down delay-2">
           <a href="#" onclick="showAlert()">
             <div class="text">
               <h4>유지보수
@@ -245,7 +248,7 @@
             </div>  
           </a>
         </li>
-        <li>
+        <li class="back-to-position to-down delay-3">
           <a href="#" onclick="showAlert()">
             <div class="text">
               <h4>웹 호스팅
@@ -259,8 +262,8 @@
         </li>
       </ul>
     </div>
-    <div class="btn-container">
-      <a class="btn btn--trans" href="#" onclick="showAlert()"> 더 자세히 보기
+    <div class="btn-container scroll-spy">
+      <a class="btn btn--trans back-to-position to-slow" href="#" onclick="showAlert()"> 더 자세히 보기
         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M8.57129 5.9375C8.32966 6.17912 8.32966 6.57088 8.57129 6.8125L11.6338 9.875H4.63379C4.28861 9.875 4.00879 10.1548 4.00879 10.5C4.00879 10.8452 4.28861 11.125 4.63379 11.125H11.6338L8.57129 14.1875C8.32966 14.4291 8.32966 14.8209 8.57129 15.0625C8.81291 15.3041 9.20466 15.3041 9.44629 15.0625L13.3017 11.2071C13.6922 10.8166 13.6922 10.1834 13.3017 9.79289L9.44629 5.9375C9.20466 5.69587 8.81291 5.69588 8.57129 5.9375Z"/>
         </svg>
@@ -272,10 +275,12 @@
   <section class="business">
     <div class="view-wrap">
       <div class="design-text dt-business">BUSINESS</div>
-      <h3 class="h3 h3--black">always provide</h3>
-      <div class="content">
-        <div class="business-img"></div>
-        <div class="business-text">
+      <div class="scroll-spy">
+        <h3 class="h3 h3--black back-to-position to-slow delay-0">always provide</h3>
+      </div>
+      <div class="content scroll-spy">
+        <div class="business-img back-to-position to-right delay-0"></div>
+        <div class="business-text back-to-position to-left delay-1">
           <div>
             <div class="num">Business1</div>
             <div class="title">끊임없는 발전</div>
@@ -294,9 +299,9 @@
           </div>
         </div>
       </div>
-      <div class="content">
+      <div class="content scroll-spy">
         
-        <div class="business-text">
+        <div class="business-text back-to-position to-right delay-0">
         <div>
           <div class="num">Business2</div>
           <div class="title">안정적인 네트워크와 기술</div>
@@ -314,11 +319,11 @@
           </div>
         </div>
         </div>
-        <div class="business-img"></div>
+        <div class="business-img back-to-position to-left delay-1"></div>
       </div>
-      <div class="content">
-        <div class="business-img"></div>
-        <div class="business-text">
+      <div class="content scroll-spy">
+        <div class="business-img back-to-position to-right delay-0"></div>
+        <div class="business-text back-to-position to-left delay-1">
         <div>
           <div class="num">Business3</div>
           <div class="title">고객 중심 서비스</div>
@@ -343,13 +348,14 @@
 
   <!-- [s7] bulid : 사례-->
   <section class="bulid">
-    <div class="design-text dt-wemake">WE MAKE EVERYTHING IN IT</div>
+    <div class="design-text dt-wemake ">WE MAKE EVERYTHING IN IT</div>
     <div class="round"></div>
     <div class="view-wrap">
-      <h3 class="h3 h3--black">what are we going to build</h3>
-      <div class="container">
-
-        <div class="item">
+      <div class="scroll-spy">
+        <h3 class="h3 h3--black back-to-position to-slow">what are we going to build</h3>
+      </div>
+      <div class="container scroll-spy">
+        <div class="item back-to-position to-down delay-0">
           <div class="build-img-wrap">
             <div class="bulid-img"></div>
           </div>
@@ -360,7 +366,7 @@
           </div>
         </div>
 
-        <div class="item">
+        <div class="item back-to-position to-down delay-1">
           <div class="build-img-wrap">
             <div class="bulid-img"></div>
           </div>
@@ -371,7 +377,7 @@
           </div>
         </div>
 
-        <div class="item">
+        <div class="item back-to-position to-down delay-2">
           <div class="build-img-wrap">
             <div class="bulid-img"></div>
           </div>
@@ -382,7 +388,7 @@
           </div>
         </div>
 
-        <div class="item">
+        <div class="item back-to-position to-down delay-3">
           <div class="build-img-wrap">
             <div class="bulid-img"></div>
           </div>
@@ -393,7 +399,7 @@
           </div>
         </div>
 
-        <div class="item">
+        <div class="item back-to-position to-down delay-4">
           <div class="build-img-wrap">
             <div class="bulid-img"></div>
           </div>
@@ -404,7 +410,7 @@
           </div>
         </div>
 
-        <div class="item">
+        <div class="item back-to-position to-down delay-5">
           <div class="build-img-wrap">
             <div class="bulid-img"></div>
           </div>
@@ -415,7 +421,7 @@
           </div>
         </div>
 
-        <div class="item">
+        <div class="item back-to-position to-down delay-6">
           <div class="build-img-wrap">
             <div class="bulid-img"></div>
           </div>
@@ -426,7 +432,7 @@
           </div>
         </div>
 
-        <div class="item">
+        <div class="item back-to-position to-down delay-7">
           <div class="build-img-wrap">
             <div class="bulid-img"></div>
           </div>
@@ -437,7 +443,7 @@
           </div>
         </div>
 
-        <div class="item">
+        <div class="item back-to-position to-down delay-8">
           <div class="build-img-wrap">
             <div class="bulid-img"></div>
           </div>
@@ -450,8 +456,8 @@
 
       </div>
     </div>
-    <div class="btn-container" >
-      <a class="btn btn--trans" href="#" onclick="showAlert()">더 자세히 보기
+    <div class="btn-container scroll-spy" >
+      <a class="btn btn--trans back-to-position to-slow" href="#" onclick="showAlert()">더 자세히 보기
         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M8.57129 5.9375C8.32966 6.17912 8.32966 6.57088 8.57129 6.8125L11.6338 9.875H4.63379C4.28861 9.875 4.00879 10.1548 4.00879 10.5C4.00879 10.8452 4.28861 11.125 4.63379 11.125H11.6338L8.57129 14.1875C8.32966 14.4291 8.32966 14.8209 8.57129 15.0625C8.81291 15.3041 9.20466 15.3041 9.44629 15.0625L13.3017 11.2071C13.6922 10.8166 13.6922 10.1834 13.3017 9.79289L9.44629 5.9375C9.20466 5.69587 8.81291 5.69588 8.57129 5.9375Z"/>
         </svg>
@@ -460,10 +466,10 @@
   </section>
 
   <!-- [s8] news : 뉴스-->
-  <section class="news">
+  <section class="news ">
     <div class="dim dim6 gradient-side"></div>
-    <div class="view-wrap">
-      <div class="left">
+    <div class="view-wrap scroll-spy">
+      <div class="left back-to-position to-right">
         <div class="h3">news</div>
         <div class="text">
           JT의 새로운 공지와 <br/>
@@ -479,7 +485,7 @@
         </div>
       </div>
 
-      <div class="swiper news-right">
+      <div class="swiper news-right back-to-position to-left">
         <div class="swiper-wrapper">
 
           <div class="swiper-slide">
@@ -583,10 +589,10 @@
 
   <!-- [s9] 인재채용, 문의하기 -->
   <section class="sec9">
-    <div class="sec9-wrap">
+    <div class="sec9-wrap scroll-spy">
 
       <div class="employ">
-        <div class="content">
+        <div class="content back-to-position to-right">
           <div class="title">인재 채용</div>
           <div class="description">여러분의 역량, 우리와 함께 발전시켜보세요! 지금 지원하세요.</div>
           <div class="btn-container">
@@ -601,7 +607,7 @@
       </div>
 
       <div class="inquiry">
-        <div class="content">
+        <div class="content back-to-position to-left">
           <div class="title">문의하기</div>
           <div class="description">궁금한 사항이 있으시면 언제든지 문의해주세요</div>
           <div class="btn-container">
@@ -667,7 +673,7 @@
       </div>
     </div>
     <div class="foot3">
-      Copyright JayDesign All pictures cannot be copied without permission. (2023.05)
+      Copyright JayDesign 2023.05
     </div>
     
   </section>

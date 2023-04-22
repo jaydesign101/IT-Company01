@@ -191,9 +191,10 @@ ul.skill > li{
     cursor: pointer;
     display: flex;
     flex-direction:column;
-    justify-content: flex-end;
-    
+    justify-content: flex-end;  
 }
+
+
 /* text */
 ul.skill > li > a .text{
     color: #fff;
@@ -676,7 +677,7 @@ ul.skill > li > a .text > .description > p{
 }
 .footer .foot3{
     height: 41px;
-    background-color: #002C4B;
+    background-color: var(--bb2);
     text-align: center;
     font-weight: 400;
     font-size: 14px;
