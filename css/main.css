@@ -566,8 +566,8 @@ ul.skill > li > a .text > .description > p{
     background-position: center;
     overflow: hidden;
 }
-.sec9 .employ { background-image: url("/img/s9-left.png");}
-.sec9 .inquiry{ background-image: url("/img/s9-right.png"); }
+.sec9 .employ { background-image: url("../img/s9-left.png");}
+.sec9 .inquiry{ background-image: url("../img/s9-right.png"); }
 .sec9 .employ .dim, .sec9 .inquiry .dim{ width: 1060px;}
 .sec9 .employ .gradient-side::after{ background: transparent;}
 .sec9 .inquiry .gradient-side::before{ background: transparent;}
